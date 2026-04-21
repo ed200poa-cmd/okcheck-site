@@ -175,18 +175,21 @@ section { padding: 80px 0; }
 .who-card p { font-size: 13px; color: var(--text-secondary); }
 
 /* === PRICING === */
-.pricing-cards { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+.pricing-cards { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; align-items: flex-start; }
+.pricing-group { display: flex; flex-direction: column; gap: 10px; width: 320px; }
 .pricing-card {
     background: var(--surface); border: 1px solid var(--border);
-    border-radius: var(--radius); padding: 32px; width: 320px;
+    border-radius: var(--radius); padding: 32px;
     position: relative;
 }
 .pricing-card.featured { border-color: var(--blue); }
+.pricing-card.max-featured { border-color: var(--purple); }
 .pricing-badge {
     position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
     background: var(--blue); color: white; padding: 4px 16px;
     border-radius: 12px; font-size: 12px; font-weight: 700;
 }
+.pricing-badge.purple { background: var(--purple); }
 .pricing-card h3 { font-size: 20px; font-weight: 700; margin-bottom: 4px; }
 .pricing-price { font-size: 36px; font-weight: 800; margin: 12px 0 4px; }
 .pricing-price span { font-size: 16px; font-weight: 400; color: var(--text-secondary); }
@@ -203,7 +206,19 @@ section { padding: 80px 0; }
     text-decoration: none;
 }
 .pricing-btn.primary { background: var(--blue); color: white; }
+.pricing-btn.purple { background: var(--purple); color: white; }
 .pricing-btn.secondary { background: var(--surface2); color: var(--text); border: 1px solid var(--border); }
+.pricing-monthly-alt {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 12px; padding: 14px 20px;
+    display: flex; justify-content: space-between; align-items: center;
+    text-decoration: none;
+}
+.pricing-monthly-alt:hover { border-color: var(--blue-light); text-decoration: none; }
+.pricing-monthly-alt.max-alt:hover { border-color: var(--purple); }
+.pricing-monthly-alt-label { font-size: 13px; color: var(--text-muted); }
+.pricing-monthly-alt-price { font-size: 15px; font-weight: 700; color: var(--blue-light); }
+.pricing-monthly-alt.max-alt .pricing-monthly-alt-price { color: var(--purple); }
 
 /* === PRIVACY === */
 .privacy-section { text-align: center; }
@@ -436,48 +451,71 @@ footer {
     <p class="section-subtitle">Start free. Upgrade when you're ready.</p>
 
     <div class="pricing-cards">
-        <div class="pricing-card">
-            <h3>Free Version</h3>
-            <div class="pricing-price">$0 <span>/ free</span></div>
-            <p class="pricing-desc">Full access to all features</p>
-            <ul class="pricing-features">
-                <li>Unlimited check-ins</li>
-                <li>SOS emergency alerts</li>
-                <li>Team dashboard</li>
-                <li>Push notifications</li>
-                <li>Privacy-First location</li>
-            </ul>
-            <a href="#" class="pricing-btn secondary">Start Free Trial</a>
+
+        <!-- FREE -->
+        <div class="pricing-group">
+            <div class="pricing-card">
+                <h3>Free</h3>
+                <div class="pricing-price">$0 <span>/ forever</span></div>
+                <p class="pricing-desc">1 team · up to 10 members</p>
+                <ul class="pricing-features">
+                    <li>Check-ins, SOS &amp; messages</li>
+                    <li>Team dashboard</li>
+                    <li>Push notifications</li>
+                    <li>Privacy-First location</li>
+                    <li>Transfer leadership</li>
+                    <li>Share &amp; QR invite</li>
+                </ul>
+                <a href="#" class="pricing-btn secondary">Download Free</a>
+            </div>
         </div>
 
-        <div class="pricing-card featured">
-            <div class="pricing-badge">Save 37%</div>
-            <h3>Pro Annual</h3>
-            <div class="pricing-price">$14.99 <span>/ year</span></div>
-            <p class="pricing-desc">Best value — $1.25/month</p>
-            <ul class="pricing-features">
-                <li>Everything in Free Trial</li>
-                <li>Unlimited team members</li>
-                <li>Advanced analytics</li>
-                <li>Priority support</li>
-                <li>Early access to new features</li>
-            </ul>
-            <a href="#" class="pricing-btn primary">Get Pro Annual</a>
+        <!-- PRO -->
+        <div class="pricing-group">
+            <div class="pricing-card featured">
+                <div class="pricing-badge">Save 37%</div>
+                <h3>Pro Annual</h3>
+                <div class="pricing-price">$14.99 <span>/ year</span></div>
+                <p class="pricing-desc">Best value — $1.25/month</p>
+                <ul class="pricing-features">
+                    <li>Up to 10 teams</li>
+                    <li>Up to 100 members per team</li>
+                    <li>Team sorting</li>
+                    <li>All Free features</li>
+                </ul>
+                <a href="#" class="pricing-btn primary">Get Pro Annual</a>
+            </div>
+            <a href="#" class="pricing-monthly-alt">
+                <div>
+                    <div class="pricing-monthly-alt-label">Pro Monthly</div>
+                </div>
+                <div class="pricing-monthly-alt-price">$1.99 / mo</div>
+            </a>
         </div>
 
-        <div class="pricing-card">
-            <h3>Pro Monthly</h3>
-            <div class="pricing-price">$1.99 <span>/ month</span></div>
-            <p class="pricing-desc">Flexible month-to-month</p>
-            <ul class="pricing-features">
-                <li>Everything in Free Trial</li>
-                <li>Unlimited team members</li>
-                <li>Advanced analytics</li>
-                <li>Priority support</li>
-                <li>Cancel anytime</li>
-            </ul>
-            <a href="#" class="pricing-btn secondary">Get Pro Monthly</a>
+        <!-- MAX -->
+        <div class="pricing-group">
+            <div class="pricing-card max-featured">
+                <div class="pricing-badge purple">Save 37%</div>
+                <h3>Max Annual</h3>
+                <div class="pricing-price">$37.99 <span>/ year</span></div>
+                <p class="pricing-desc">Best value — $3.17/month</p>
+                <ul class="pricing-features">
+                    <li>Up to 100 teams</li>
+                    <li>Up to 500 members per team</li>
+                    <li>Everything in Pro</li>
+                    <li>Priority support</li>
+                </ul>
+                <a href="#" class="pricing-btn purple">Get Max Annual</a>
+            </div>
+            <a href="#" class="pricing-monthly-alt max-alt">
+                <div>
+                    <div class="pricing-monthly-alt-label">Max Monthly</div>
+                </div>
+                <div class="pricing-monthly-alt-price">$4.99 / mo</div>
+            </a>
         </div>
+
     </div>
 </div>
 </section>
