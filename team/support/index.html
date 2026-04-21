@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Support & FAQ — OK? Team</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg: #000000;
+    --surface: #111111;
+    --surface2: #1a1a1a;
+    --blue: #3B82F6;
+    --blue-light: #60A5FA;
+    --blue-dark: #1D4ED8;
+    --green: #22C55E;
+    --text: #FFFFFF;
+    --text-secondary: #9CA3AF;
+    --text-muted: #6B7280;
+    --border: #222222;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+}
+a { color: var(--blue-light); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.top-nav {
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--border);
+    background: rgba(0,0,0,0.9);
+}
+.back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    color: var(--text-secondary); font-size: 14px; font-weight: 500;
+    text-decoration: none;
+}
+.back-link:hover { color: var(--text); text-decoration: none; }
+
+.wrap {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+}
+h1 { font-size: 32px; font-weight: 800; margin-bottom: 8px; }
+.subtitle { color: var(--text-muted); font-size: 16px; margin-bottom: 40px; }
+
+.section-label {
+    font-size: 12px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 2px; color: var(--blue); margin-bottom: 16px;
+    margin-top: 48px;
+}
+.section-label:first-of-type { margin-top: 0; }
+
+.faq-list { display: flex; flex-direction: column; gap: 2px; }
+
+.faq-item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.faq-question {
+    width: 100%; text-align: left;
+    padding: 18px 20px;
+    background: none; border: none; cursor: pointer;
+    color: var(--text); font-family: inherit;
+    font-size: 15px; font-weight: 600;
+    display: flex; justify-content: space-between; align-items: center;
+    gap: 12px;
+}
+.faq-question:hover { background: var(--surface2); }
+.faq-chevron {
+    flex-shrink: 0; width: 18px; height: 18px;
+    color: var(--text-muted); transition: transform 0.2s;
+}
+.faq-item.open .faq-chevron { transform: rotate(180deg); }
+.faq-answer {
+    display: none;
+    padding: 0 20px 18px;
+    font-size: 14px; color: var(--text-secondary); line-height: 1.7;
+}
+.faq-item.open .faq-answer { display: block; }
+.faq-answer ul { margin-left: 18px; margin-top: 8px; }
+.faq-answer li { margin-bottom: 4px; }
+
+.contact-box {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 48px;
+    text-align: center;
+}
+.contact-box h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+.contact-box p { font-size: 14px; color: var(--text-secondary); margin-bottom: 16px; }
+.contact-btn {
+    display: inline-block;
+    background: var(--blue); color: white;
+    padding: 10px 24px; border-radius: 8px;
+    font-weight: 700; font-size: 14px;
+    text-decoration: none;
+}
+.contact-btn:hover { background: var(--blue-dark); text-decoration: none; }
+
+footer {
+    border-top: 1px solid var(--border);
+    padding: 32px 24px;
+    text-align: center;
+}
+.footer-links {
+    display: flex; flex-wrap: wrap; gap: 20px;
+    justify-content: center; margin-bottom: 16px;
+}
+.footer-links a { font-size: 13px; color: var(--text-muted); }
+.footer-links a:hover { color: var(--text); }
+.footer-copy { font-size: 12px; color: var(--text-muted); }
+</style>
+</head>
+<body>
+
+<div class="top-nav">
+    <a href="/team/" class="back-link">← OK? Team</a>
+</div>
+
+<div class="wrap">
+    <h1>Support &amp; FAQ</h1>
+    <p class="subtitle">Answers to common questions about OK? Team.</p>
+
+    <!-- CHECK-IN -->
+    <div class="section-label">Check-ins</div>
+    <div class="faq-list">
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggle(this)">
+                How do I check in?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer">
+                Open the OK? Team app and tap the large <strong>Check In</strong> button on the home screen.
+                You'll receive a push notification reminder 5 minutes before your check-in window closes.
+                Once you tap, your status is instantly updated on the team dashboard.
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggle(this)">
+                What are check-in windows?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer">
+                Your team leader sets one or more daily check-in windows (time slots).
+                Each window has a start time and a grace period. If you don't check in before the window closes,
+                you'll be marked as <strong>Missed</strong> and your leader will be notified.
+                The dashboard shows your status for each window separately.
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggle(this)">
+                What happens if I miss a check-in?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer">
+                Your team leader receives an immediate push notification and email alert.
+                The app will also attempt to share your last known GPS location with your leader so they can confirm you're safe.
+                Your status on the dashboard is marked as <strong>Missed</strong> for that window.
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggle(this)">
+                Can I add a note to my check-in?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer">
+                Yes. When you check in, you can optionally add a short note (e.g., "Running 10 min late" or "At the site").
+                Notes are visible to your team leader on the dashboard.
+            </div>
+        </div>
+    </div>
+
+    <!-- SOS -->
+    <div class="section-label">SOS &amp; Emergencies</div>
+    <div class="faq-list">
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggle(this)">
+                How do I send an SOS?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer">
+                Tap the red <strong>SOS</strong> button on the home screen. You'll be asked to confirm.
+                Once confirmed, an emergency alert is immediately sent to your team leader via push notification and email,
+                including your current GPS coordinates.
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggle(this)">
+                Is SOS a replacement for calling 911?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer">
+                <strong>No.</strong> In a life-threatening emergency, always contact your local emergency services (e.g., 911 in the US) first.
+                OK? Team SOS is a supplement — it notifies your team leader — but is not a monitored emergency dispatch system.
+                Delivery is not guaranteed if you have no internet connection.
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggle(this)">
+                What location data is shared during SOS?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer">
+                Your current GPS coordinates (latitude and longitude) are sent to your team leader only.
+                Location is <strong>never</strong> shared during normal check-ins — only on SOS or missed check-in events.
+                Location data is not shared with third parties.
+            </div>
+        </div>
+    </div>
+
+    <!-- NOTIFICATIONS -->
+    <div class="section-label">Notifications</div>
+    <div class="faq-list">
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggle(this)">
+                I'm not receiving notifications. What should I do?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer">
+                Try these steps:
+                <ul>
+                    <li>Go to iPhone <strong>Settings → OK? Team → Notifications</strong> and make sure notifications are enabled.</li>
+                    <li>Check that Do Not Disturb / Focus mode is not blocking alerts.</li>
+                    <li>Make sure your internet connection is active.</li>
+                    <li>Log out and back in to the app to refresh your push token.</li>
+                    <li>If the issue persists, email <a href="mailto:team@okcheck.app">team@okcheck.app</a>.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggle(this)">
+                Are check-in times adjusted for my timezone?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer">
+                Yes. OK? Team automatically adjusts all check-in window times to each member's local device timezone.
+                Notifications and reminders are delivered at the correct local time for each member.
+            </div>
+        </div>
+    </div>
+
+    <!-- TEAM MANAGEMENT -->
+    <div class="section-label">Team Management</div>
+    <div class="faq-list">
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggle(this)">
+                How do I create a team?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer">
+                After logging in, tap <strong>Create Team</strong> on the home screen. Set a team name and icon.
+                You'll receive a unique invite code. Share this code with your members — they can join via <strong>Join Team</strong> in the app.
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggle(this)">
+                How do I remove a member from my team?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer">
+                As team leader, go to the <strong>Members</strong> tab, tap the member's name, and select <strong>Remove Member</strong>.
+                The member will be removed immediately and will no longer appear on the dashboard.
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggle(this)">
+                How do I export check-in records?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer">
+                Team leaders can export check-in history as a CSV file. Go to the <strong>Dashboard</strong>,
+                tap the export icon, select your date range, and tap <strong>Export CSV</strong>.
+                The file can be opened in Google Sheets, Excel, or any spreadsheet app.
+            </div>
+        </div>
+    </div>
+
+    <!-- SUBSCRIPTION -->
+    <div class="section-label">Subscription &amp; Billing</div>
+    <div class="faq-list">
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggle(this)">
+                What's included in the Free Version?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer">
+                The Free Version includes unlimited check-ins, SOS emergency alerts, the team dashboard,
+                push notifications, and Privacy-First location sharing — no credit card required.
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggle(this)">
+                How do I cancel my subscription?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer">
+                Subscriptions are managed through the Apple App Store. To cancel, go to
+                <strong>iPhone Settings → [your name] → Subscriptions → OK? Team</strong> and tap <strong>Cancel Subscription</strong>.
+                Cancel at least 24 hours before your renewal date to avoid being charged.
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggle(this)">
+                How do I request a refund?
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer">
+                Refunds are handled by Apple. Visit <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>,
+                sign in with your Apple ID, find your OK? Team purchase, and select <strong>Request a Refund</strong>.
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-box">
+        <h3>Still need help?</h3>
+        <p>Our team responds to all emails within 24 hours.</p>
+        <a href="mailto:team@okcheck.app" class="contact-btn">Email team@okcheck.app</a>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-links">
+        <a href="/team/privacy/">Privacy Policy</a>
+        <a href="/team/terms/">Terms of Service</a>
+        <a href="/team/data-deletion/">Data Deletion</a>
+        <a href="/team/contact/">Contact</a>
+    </div>
+    <div class="footer-copy">© 2026 OK? Team (OkCheck.app). All rights reserved.</div>
+</footer>
+
+<script>
+function toggle(btn) {
+    var item = btn.closest('.faq-item');
+    item.classList.toggle('open');
+}
+</script>
+</body>
+</html>

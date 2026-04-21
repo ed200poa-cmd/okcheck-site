@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — OK? Team</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg: #000000;
+    --surface: #111111;
+    --surface2: #1a1a1a;
+    --blue: #3B82F6;
+    --blue-light: #60A5FA;
+    --blue-dark: #1D4ED8;
+    --green: #22C55E;
+    --text: #FFFFFF;
+    --text-secondary: #9CA3AF;
+    --text-muted: #6B7280;
+    --border: #222222;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+}
+a { color: var(--blue-light); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.top-nav {
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--border);
+    background: rgba(0,0,0,0.9);
+}
+.back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    color: var(--text-secondary); font-size: 14px; font-weight: 500;
+    text-decoration: none;
+}
+.back-link:hover { color: var(--text); text-decoration: none; }
+
+.wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 64px 24px 80px;
+    text-align: center;
+}
+h1 { font-size: 36px; font-weight: 800; margin-bottom: 12px; }
+.subtitle { color: var(--text-muted); font-size: 16px; margin-bottom: 48px; }
+
+.contact-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 40px 32px;
+    margin-bottom: 24px;
+}
+.contact-icon { font-size: 40px; margin-bottom: 16px; }
+.contact-card h2 { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+.contact-card p { font-size: 14px; color: var(--text-secondary); margin-bottom: 20px; }
+.contact-email {
+    display: inline-block;
+    font-size: 18px; font-weight: 700; color: var(--blue-light);
+    background: var(--surface2); border: 1px solid var(--border);
+    border-radius: 10px; padding: 12px 24px;
+    margin-bottom: 20px;
+}
+.contact-email:hover { color: var(--text); text-decoration: none; background: #222; }
+.email-btn {
+    display: inline-block;
+    background: var(--blue); color: white;
+    padding: 12px 28px; border-radius: 10px;
+    font-weight: 700; font-size: 15px;
+    text-decoration: none;
+}
+.email-btn:hover { background: var(--blue-dark); text-decoration: none; }
+
+.topics {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+    margin-top: 40px; text-align: left;
+}
+.topic-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+}
+.topic-card .icon { font-size: 22px; margin-bottom: 8px; }
+.topic-card h3 { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+.topic-card p { font-size: 13px; color: var(--text-muted); }
+
+.response-note {
+    margin-top: 32px;
+    font-size: 13px; color: var(--text-muted);
+}
+
+@media (max-width: 480px) {
+    .topics { grid-template-columns: 1fr; }
+}
+
+footer {
+    border-top: 1px solid var(--border);
+    padding: 32px 24px;
+    text-align: center;
+}
+.footer-links {
+    display: flex; flex-wrap: wrap; gap: 20px;
+    justify-content: center; margin-bottom: 16px;
+}
+.footer-links a { font-size: 13px; color: var(--text-muted); }
+.footer-links a:hover { color: var(--text); }
+.footer-copy { font-size: 12px; color: var(--text-muted); }
+</style>
+</head>
+<body>
+
+<div class="top-nav">
+    <a href="/team/" class="back-link">← OK? Team</a>
+</div>
+
+<div class="wrap">
+    <h1>Contact Us</h1>
+    <p class="subtitle">We're here to help. Reach out anytime.</p>
+
+    <div class="contact-card">
+        <div class="contact-icon">✉️</div>
+        <h2>OK? Team Support</h2>
+        <p>For all questions, feedback, bug reports, and account requests — email us directly.</p>
+        <div style="margin-bottom:16px;">
+            <a href="mailto:team@okcheck.app" class="contact-email">team@okcheck.app</a>
+        </div>
+        <a href="mailto:team@okcheck.app" class="email-btn">Send Email</a>
+    </div>
+
+    <div class="topics">
+        <div class="topic-card">
+            <div class="icon">🐛</div>
+            <h3>Bug reports</h3>
+            <p>Found something broken? Let us know what happened and we'll fix it.</p>
+        </div>
+        <div class="topic-card">
+            <div class="icon">💡</div>
+            <h3>Feature requests</h3>
+            <p>Have an idea to make OK? Team better? We'd love to hear it.</p>
+        </div>
+        <div class="topic-card">
+            <div class="icon">🔐</div>
+            <h3>Account &amp; data</h3>
+            <p>Need help with your account, data export, or account deletion?</p>
+        </div>
+        <div class="topic-card">
+            <div class="icon">💳</div>
+            <h3>Billing</h3>
+            <p>Questions about your subscription or need help with a refund?</p>
+        </div>
+    </div>
+
+    <p class="response-note">We respond to all emails within <strong style="color:var(--text);">24 hours</strong> on business days.</p>
+</div>
+
+<footer>
+    <div class="footer-links">
+        <a href="/team/privacy/">Privacy Policy</a>
+        <a href="/team/terms/">Terms of Service</a>
+        <a href="/team/data-deletion/">Data Deletion</a>
+        <a href="/team/contact/">Contact</a>
+    </div>
+    <div class="footer-copy">© 2026 OK? Team (OkCheck.app). All rights reserved.</div>
+</footer>
+
+</body>
+</html>

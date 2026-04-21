@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Deletion — OK? Team</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg: #000000;
+    --surface: #111111;
+    --surface2: #1a1a1a;
+    --blue: #3B82F6;
+    --blue-light: #60A5FA;
+    --blue-dark: #1D4ED8;
+    --red: #EF4444;
+    --green: #22C55E;
+    --text: #FFFFFF;
+    --text-secondary: #9CA3AF;
+    --text-muted: #6B7280;
+    --border: #222222;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+}
+a { color: var(--blue-light); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.top-nav {
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--border);
+    background: rgba(0,0,0,0.9);
+}
+.back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    color: var(--text-secondary); font-size: 14px; font-weight: 500;
+    text-decoration: none;
+}
+.back-link:hover { color: var(--text); text-decoration: none; }
+
+.wrap {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+}
+h1 { font-size: 32px; font-weight: 800; margin-bottom: 8px; }
+.subtitle { color: var(--text-muted); font-size: 15px; margin-bottom: 40px; }
+
+.method-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 28px;
+    margin-bottom: 20px;
+}
+.method-header {
+    display: flex; align-items: center; gap: 14px;
+    margin-bottom: 16px;
+}
+.method-badge {
+    background: var(--blue); color: white;
+    font-size: 12px; font-weight: 700;
+    padding: 4px 10px; border-radius: 6px;
+    white-space: nowrap;
+}
+.method-badge.alt { background: var(--surface2); color: var(--text-muted); border: 1px solid var(--border); }
+.method-card h2 { font-size: 18px; font-weight: 700; }
+
+.steps-list { list-style: none; margin: 0; }
+.steps-list li {
+    display: flex; gap: 14px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px; color: var(--text-secondary);
+}
+.steps-list li:last-child { border-bottom: none; }
+.step-num {
+    flex-shrink: 0; width: 24px; height: 24px;
+    background: var(--blue); color: white;
+    border-radius: 50%; font-size: 12px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+}
+
+.email-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--blue); color: white;
+    padding: 10px 22px; border-radius: 8px;
+    font-weight: 700; font-size: 14px;
+    text-decoration: none; margin-top: 16px;
+}
+.email-btn:hover { background: var(--blue-dark); text-decoration: none; }
+
+.what-deleted {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 32px;
+}
+.what-deleted h3 { font-size: 15px; font-weight: 700; margin-bottom: 12px; }
+.deleted-list { list-style: none; margin: 0; }
+.deleted-list li {
+    display: flex; align-items: flex-start; gap: 10px;
+    font-size: 14px; color: var(--text-secondary);
+    padding: 5px 0;
+}
+.deleted-list li::before { content: "✓"; color: var(--green); font-weight: 700; flex-shrink: 0; }
+
+.retention-note {
+    margin-top: 32px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 20px;
+    font-size: 14px; color: var(--text-secondary);
+}
+.retention-note strong { color: var(--text); }
+
+footer {
+    border-top: 1px solid var(--border);
+    padding: 32px 24px;
+    text-align: center;
+}
+.footer-links {
+    display: flex; flex-wrap: wrap; gap: 20px;
+    justify-content: center; margin-bottom: 16px;
+}
+.footer-links a { font-size: 13px; color: var(--text-muted); }
+.footer-links a:hover { color: var(--text); }
+.footer-copy { font-size: 12px; color: var(--text-muted); }
+</style>
+</head>
+<body>
+
+<div class="top-nav">
+    <a href="/team/" class="back-link">← OK? Team</a>
+</div>
+
+<div class="wrap">
+    <h1>Data Deletion</h1>
+    <p class="subtitle">You have the right to delete your account and all associated data at any time.
+    Choose the method that works best for you.</p>
+
+    <!-- METHOD 1 -->
+    <div class="method-card">
+        <div class="method-header">
+            <span class="method-badge">Recommended</span>
+            <h2>Delete account in-app</h2>
+        </div>
+        <ul class="steps-list">
+            <li>
+                <span class="step-num">1</span>
+                Open the <strong>OK? Team</strong> app on your iPhone.
+            </li>
+            <li>
+                <span class="step-num">2</span>
+                Tap <strong>Settings</strong> (gear icon) in the bottom navigation bar.
+            </li>
+            <li>
+                <span class="step-num">3</span>
+                Scroll down and tap <strong>Delete Account</strong>.
+            </li>
+            <li>
+                <span class="step-num">4</span>
+                Confirm deletion when prompted. Your account and all data will be permanently deleted.
+            </li>
+        </ul>
+    </div>
+
+    <!-- METHOD 2 -->
+    <div class="method-card">
+        <div class="method-header">
+            <span class="method-badge alt">Alternative</span>
+            <h2>Request deletion by email</h2>
+        </div>
+        <p style="font-size:14px; color:var(--text-secondary); margin-bottom:4px;">
+            If you can't access the app, email us with your request. Include the email address
+            associated with your OK? Team account.
+        </p>
+        <a href="mailto:team@okcheck.app?subject=Account%20Deletion%20Request&body=Please%20delete%20my%20OK%3F%20Team%20account%20and%20all%20associated%20data.%0A%0AAccount%20email%3A%20" class="email-btn">
+            ✉️ Email team@okcheck.app
+        </a>
+    </div>
+
+    <!-- WHAT GETS DELETED -->
+    <div class="what-deleted">
+        <h3>What gets deleted</h3>
+        <ul class="deleted-list">
+            <li>Your account profile (name, email address)</li>
+            <li>All check-in records and history</li>
+            <li>All team messages and check-in notes you've sent</li>
+            <li>Your device push token</li>
+            <li>Any SOS or location data associated with your account</li>
+            <li>Your team membership records</li>
+        </ul>
+    </div>
+
+    <div class="retention-note">
+        <strong>Retention timeline:</strong> Upon account deletion, all personal data is permanently deleted from our
+        AWS DynamoDB servers within <strong>30 days</strong>. You will receive an email confirmation once deletion is complete.
+        Data is not recoverable after deletion.
+    </div>
+</div>
+
+<footer>
+    <div class="footer-links">
+        <a href="/team/privacy/">Privacy Policy</a>
+        <a href="/team/terms/">Terms of Service</a>
+        <a href="/team/data-deletion/">Data Deletion</a>
+        <a href="/team/contact/">Contact</a>
+    </div>
+    <div class="footer-copy">© 2026 OK? Team (OkCheck.app). All rights reserved.</div>
+</footer>
+
+</body>
+</html>
