@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>OK? - Daily Check-in</title>
+
+  <!-- Browser tab icon -->
+  <link rel="icon" type="image/png" href="/assets/OK-icon.png" />
+
+  <style>
+    :root{
+      --bg: #f4f6f8;
+      --card: #ffffff;
+      --text: #111827;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --link: #2563eb;
+      --pill: #eef2ff;
+      --pillText: #1f2a44;
+      --shadow: 0 10px 30px rgba(17,24,39,.08);
+      --radius: 18px;
+    }
+
+    *{ box-sizing: border-box; }
+    body{
+      margin:0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--text);
+      background: radial-gradient(1200px 800px at 30% 0%, #ffffff 0%, var(--bg) 55%, #eef2f7 100%);
+    }
+
+    .container{
+      max-width: 1060px;
+      margin: 38px auto 70px;
+      padding: 0 22px;
+    }
+
+    .topbar{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap: 14px;
+      min-width: 280px;
+    }
+
+    .brand img{
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(17,24,39,.12);
+      object-fit: cover;
+      background: #fff;
+    }
+
+    .brand h1{
+      margin:0;
+      font-size: 44px;
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
+
+    .subtitle{
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .nav{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content:flex-end;
+      padding-top: 6px;
+    }
+
+    .nav a{
+      display:inline-flex;
+      align-items:center;
+      padding: 10px 14px;
+      border-radius: 999px;
+      text-decoration:none;
+      background: var(--pill);
+      color: var(--pillText);
+      border: 1px solid rgba(37,99,235,.15);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .nav a:hover{
+      border-color: rgba(37,99,235,.28);
+      box-shadow: 0 10px 18px rgba(37,99,235,.10);
+      transform: translateY(-1px);
+      transition: 160ms ease;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .card{
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 22px 22px 20px;
+    }
+
+    .card h2{
+      margin: 0 0 10px;
+      font-size: 22px;
+      letter-spacing: -0.01em;
+    }
+
+    .card p{
+      margin: 10px 0;
+      color: var(--text);
+      line-height: 1.55;
+    }
+
+    .card ul{
+      margin: 12px 0 0 20px;
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    .muted{ color: var(--muted); }
+
+    .emailBox{
+      margin-top: 10px;
+      display:inline-flex;
+      align-items:center;
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: #fafafa;
+      gap: 10px;
+      max-width: 100%;
+    }
+
+    .emailBox a{
+      color: var(--link);
+      text-decoration: underline;
+      font-weight: 700;
+      word-break: break-word;
+    }
+
+    /* Updated footer to match policy pages */
+    .siteFooter{
+      margin-top: 22px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .siteFooter p{
+      margin: 6px 0 0;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+
+    @media (max-width: 860px){
+      .topbar{ flex-direction: column; align-items: flex-start; }
+      .nav{ justify-content:flex-start; }
+      .grid{ grid-template-columns: 1fr; }
+      .brand h1{ font-size: 40px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="topbar">
+      <div>
+        <div class="brand">
+          <img src="/assets/OK-icon.png" alt="OK? App Icon">
+          <h1>OK?</h1>
+        </div>
+        <div class="subtitle">Daily check-in reminders with optional alert email</div>
+      </div>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="/privacy/">Privacy</a>
+        <a href="/terms/">Terms</a>
+        <a href="/support/">Support</a>
+        <a href="/data-deletion/">Data Deletion</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+    </div>
+
+    <div class="grid">
+      <section class="card">
+        <h2>What OK? does</h2>
+        <p>
+          OK? lets you set a daily reminder time to check in. If you don’t confirm your check-in,
+          the app can send a pre-written alert email to a contact you choose.
+        </p>
+        <ul>
+          <li>Daily notification reminders</li>
+          <li>Optional contact email for alerts</li>
+          <li>Optional location sharing in an alert (only if enabled)</li>
+        </ul>
+        <p class="muted" style="margin-top:14px;">
+          This website provides policy and support information for the OK? iOS app.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>Quick links for review and support</h2>
+
+        <div class="muted" style="margin-top:6px;">Support Email</div>
+
+        <div class="emailBox">
+          <a
+            href="mailto:support@okcheck.app?subject=OK%3F%20Support%20Request&body=Hi%20OK%3F%20Support%2C%0A%0AI%20need%20help%20with%3A%20%0A%0ADevice%3A%20%0AiOS%20Version%3A%20%0AApp%20Version%3A%20%0A%0ADetails%3A%20%0A"
+            aria-label="Email support@okcheck.app"
+          >
+            support@okcheck.app
+          </a>
+        </div>
+
+        <p class="muted" style="margin-top:12px;">
+          Clicking the email address should open your default mail app with a new message.
+        </p>
+
+        <div class="siteFooter">
+          <p>© 2026 OK? (OkCheck.app). All rights reserved.</p>
+          <p>All content on this website is owned and operated by OkCheck.app.</p>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+</html>

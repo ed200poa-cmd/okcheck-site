@@ -1,0 +1,145 @@
+# OK? App — App Store Submission Content
+
+---
+
+## App Name
+OK? – Daily Check-in
+
+## Subtitle (30 chars max)
+Daily safety check-in & alerts
+
+---
+
+## Description
+
+OK? is a simple daily check-in app designed for personal safety and peace of mind.
+
+Set a daily reminder to check in. If you don't respond — or if you actively select "NOT OK" — the app can send a pre-written alert email to a trusted contact (your guardian) to let them know you may need help.
+
+HOW IT WORKS:
+• Set your daily check-in time (e.g., 8:00 AM)
+• When the reminder arrives, tap "OK" to confirm you're fine
+• If something is wrong, tap "NOT OK" to alert your guardian
+• If you miss your check-in, an automatic escalation alert can be sent
+
+KEY FEATURES:
+• Daily notification reminders with customizable time and sound
+• One-tap check-in: OK or NOT OK
+• Emergency guardian alerts via email
+• Optional location sharing during emergencies (opt-in only)
+• Support for up to 2 emergency contacts (guardians)
+• Check-in history log
+• Customizable escalation and re-prompt intervals
+• Safety alert message preview and editing
+• All data stored locally on your device — no account required
+• No ads, no tracking, no social features
+
+WHO IT'S FOR:
+• People living alone who want a simple safety net
+• Elderly individuals and their family members
+• Anyone who wants daily wellness accountability
+• Caregivers looking for a lightweight check-in tool
+
+Your privacy matters. OK? works with minimal data. Personal information is optional, stored only on your device, and never shared except when you explicitly send an alert.
+
+For support: support@okcheck.app
+Privacy Policy: https://www.okcheck.app/privacy/
+
+---
+
+## Keywords (100 chars max, comma-separated)
+check-in, safety, daily, wellness, alert, guardian, emergency, reminder, elderly, alone
+
+---
+
+## Promotional Text (170 chars max — can be updated anytime without a new version)
+A simple daily check-in for your safety. Set a reminder, tap OK, and let your guardian know you're fine — or get help when you're not.
+
+---
+
+## Support URL
+https://www.okcheck.app/support/
+
+## Marketing URL (optional)
+https://www.okcheck.app
+
+## Privacy Policy URL
+https://www.okcheck.app/privacy/
+
+---
+
+## Category
+Primary: Health & Fitness
+Secondary: Lifestyle
+
+---
+
+## Age Rating Questionnaire Answers
+- Cartoon or Fantasy Violence: None
+- Realistic Violence: None
+- Prolonged Graphic or Sadistic Realistic Violence: None
+- Profanity or Crude Humor: None
+- Mature/Suggestive Themes: None
+- Horror/Fear Themes: None
+- Medical/Treatment Information: None
+- Simulated Gambling: None
+- Sexual Content or Nudity: None
+- Unrestricted Web Access: None
+- Gambling with Real Currency: None
+
+Result: Rated 4+ (expected)
+
+---
+
+## App Review Information
+
+### Contact Information
+- First Name: Edward
+- Last Name: Kim
+- Phone: 201-787-0804
+- Email: ed200.poa@gmail.com
+
+### Notes for Review
+
+This app provides daily safety check-in reminders with optional emergency email alerts.
+
+Key points for review:
+
+1. NO ACCOUNT REQUIRED: The app works entirely without user registration. All data is stored locally on the device.
+
+2. EMAIL ALERTS (optional feature): If the user configures a guardian email in Settings, the app can send emergency alert emails via our server when the user taps "NOT OK" or misses a check-in. This feature requires the user to manually enter guardian contact details.
+
+3. LOCATION PERMISSION: Location is requested ONLY if the user enables "Auto-Location (Opt-in)" in Settings AND triggers an emergency alert. Location is never collected in the background or for any other purpose.
+
+4. NOTIFICATIONS: The app uses local notifications for daily check-in reminders. Notification time and sound are configurable in Settings.
+
+5. NO IN-APP PURCHASES, NO ADS, NO TRACKING.
+
+To test the app:
+- Open the app and tap "OK" to check in
+- Tap "NOT OK" to see the Help Options screen (you can tap "Cancel / Ignore" without sending any email)
+- Go to Settings to see notification, guardian, and alert configuration options
+- Go to History to see past check-in records
+
+No demo account is needed.
+
+---
+
+## App Privacy — Data Collection
+
+### Data Linked to You: None
+
+### Data Not Linked to You:
+- Contact Info (support@okcheck.app) — used only for sending emergency alerts to user-configured guardians
+- Location — used only when user explicitly opts in and triggers an emergency alert
+
+### Data Used to Track You: None
+
+---
+
+## Release Option
+☑ Manually release this version (recommended for first release)
+
+---
+
+END OF SUBMISSION CONTENT
